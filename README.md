@@ -1,1 +1,1 @@
-Código para montar uma treeview, baseado em uma tabela do banco de dados, exemplo em Delphi/Lazarus. Usa Zeoslib e componentes nativos
+Código para montar uma treeview, baseado em uma tabela do banco de dados, exemplo em Delphi/Lazarus. Usa Zeoslib e componentes nativos. Foi criado usando MySQL, mas roda em qq BD e qq Dataset q permita fazer filter.
