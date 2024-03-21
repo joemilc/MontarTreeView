@@ -1,0 +1,8 @@
+Project1.lpi Note: Adicionada definições -dBorland -dVer150 -dDelphi7 -dCompiler6_Up -dPUREPASCAL nas opções customizadas
+ Progress: Todos os arquivos de unidade encontrados
+Project1.dpr(1,18) Note: Adicionado "MODE" modificador de sintaxe Delphi após o nome da unidade.
+ : 
+ : *** Arquivos de unidade sendo convertidos pertencentes ao projeto/pacote ***
+ : 
+ Error: Exceção ocorreu durante a conversão da unidade. Continuando com arquivos de formulários das unidades já convertidas...
+ Fatal: Conversão abortada.

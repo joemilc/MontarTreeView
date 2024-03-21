@@ -1,0 +1,115 @@
+object Form1: TForm1
+  Left = 563
+  Height = 486
+  Top = 248
+  Width = 713
+  Caption = 'Form1'
+  ClientHeight = 486
+  ClientWidth = 713
+  Color = clBtnFace
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '3.2.0.0'
+  object DBGrid1: TDBGrid
+    Left = 8
+    Height = 433
+    Top = 47
+    Width = 353
+    Color = clWindow
+    Columns = <    
+      item
+        Title.Caption = 'id'
+        FieldName = 'id'
+      end    
+      item
+        Title.Caption = 'id_pai'
+        FieldName = 'id_pai'
+      end    
+      item
+        Title.Caption = 'descricao'
+        FieldName = 'descricao'
+      end>
+    DataSource = DataSource1
+    TabOrder = 0
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -12
+    TitleFont.Name = 'Segoe UI'
+  end
+  object TreeView1: TTreeView
+    Left = 367
+    Height = 433
+    Top = 47
+    Width = 339
+    Indent = 19
+    TabOrder = 1
+  end
+  object Button1: TButton
+    Left = 8
+    Height = 33
+    Top = 8
+    Width = 241
+    Caption = 'Montar TreeView'
+    TabOrder = 2
+    OnClick = Button1Click
+  end
+  object ZConnection1: TZConnection
+    ControlsCodePage = cCP_UTF8
+    AutoEncodeStrings = True
+    Properties.Strings = (
+      'controls_cp=CP_UTF16'
+    )
+    HostName = 'localhost'
+    Port = 0
+    Database = 'montatreeview'
+    User = 'root'
+    Password = '1234'
+    Protocol = 'mysql'
+    Left = 64
+    Top = 192
+  end
+  object ZQuery1: TZQuery
+    Connection = ZConnection1
+    SQL.Strings = (
+      'select * from montatreeview'
+    )
+    Params = <>
+    Left = 64
+    Top = 256
+    object ZQuery1id: TIntegerField
+      FieldKind = fkData
+      FieldName = 'id'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object ZQuery1id_pai: TIntegerField
+      FieldKind = fkData
+      FieldName = 'id_pai'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object ZQuery1descricao: TWideStringField
+      FieldKind = fkData
+      FieldName = 'descricao'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 30
+    end
+  end
+  object DataSource1: TDataSource
+    DataSet = ZQuery1
+    Left = 64
+    Top = 320
+  end
+end
